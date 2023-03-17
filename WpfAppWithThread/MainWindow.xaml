@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfAppWithThread.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppWithThread"
+        mc:Ignorable="d"
+        Title="Make Breakfast" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="25"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Enter Number of Eggs" Grid.Row="1" Grid.Column="1" Width="150" Margin="5"></TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="2" x:Name="txtEggs" Width="200" Margin="5"></TextBox>
+
+        <ListBox x:Name="lstStatus" Grid.Row="1" Grid.RowSpan="4" Grid.Column="3" Width="360" Height="Auto" Margin="5" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+
+        <TextBlock Text="Enter Number of Bacon" Grid.Row="2" Grid.Column="1" Width="150" Margin="5"></TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="2" x:Name="txtBacon" Width="200" Margin="5"></TextBox>
+
+        <TextBlock Text="Enter Number of Breads" Grid.Row="3" Grid.Column="1" Width="150" Margin="5"></TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="2" x:Name="txtBread" Width="200" Margin="5"></TextBox>
+
+        <Button Grid.Row="4" Content="Make BreakFast" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="150" Height="35" Margin="5" Click="Button_Click"/>
+    </Grid>
+</Window>
